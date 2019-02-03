@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-mar-2018 16:11:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="banco.CuentasBancarias" table="cuentas_bancarias" catalog="banco" optimistic-lock="version">
+        <id name="idCuentaBancaria" type="java.lang.Integer">
+            <column name="ID_Cuenta_Bancaria" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroCuenta" type="string">
+            <column name="Numero_Cuenta" length="50" not-null="true" />
+        </property>
+        <property name="propietario" type="string">
+            <column name="Propietario" length="50" not-null="true" />
+        </property>
+        <property name="saldo" type="int">
+            <column name="Saldo" not-null="true" />
+        </property>
+        <property name="dni" type="string">
+            <column name="DNI" length="9" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

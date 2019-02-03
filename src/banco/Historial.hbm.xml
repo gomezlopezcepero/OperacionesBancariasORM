@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-mar-2018 16:11:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="banco.Historial" table="historial" catalog="banco" optimistic-lock="version">
+        <id name="idHistorial" type="java.lang.Integer">
+            <column name="ID_Historial" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoEvento" type="string">
+            <column name="Tipo_Evento" length="10" not-null="true" />
+        </property>
+        <property name="fechaHora" type="string">
+            <column name="Fecha_Hora" length="50" not-null="true" />
+        </property>
+        <property name="numeroCuenta" type="string">
+            <column name="Numero_Cuenta" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

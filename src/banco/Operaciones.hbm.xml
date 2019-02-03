@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-mar-2018 16:11:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="banco.Operaciones" table="operaciones" catalog="banco" optimistic-lock="version">
+        <id name="idOperacion" type="java.lang.Integer">
+            <column name="ID_Operacion" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaHora" type="string">
+            <column name="Fecha_hora" length="200" not-null="true" />
+        </property>
+        <property name="numCuenta" type="string">
+            <column name="Num_Cuenta" length="50" not-null="true" />
+        </property>
+        <property name="tipoOperacion" type="string">
+            <column name="Tipo_Operacion" length="50" not-null="true" />
+        </property>
+        <property name="cantidad" type="int">
+            <column name="Cantidad" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
